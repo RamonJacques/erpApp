@@ -24,7 +24,6 @@ public class Address implements Serializable{
 	private Double cep;
 	
 	public Address() {
-		super();
 	}
 
 	public Address(Long id, String street, Integer number, String neighborhood, String complement, String city,
@@ -118,5 +117,11 @@ public class Address implements Serializable{
 			return false;
 		Address other = (Address) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String toString() {
+		return "Address [id=" + id + ", street=" + street + ", number=" + number + ", neighborhood=" + neighborhood
+				+ ", complement=" + complement + ", city=" + city + ", state=" + state + ", cep=" + cep + "]";
 	}
 }
