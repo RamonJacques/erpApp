@@ -7,16 +7,13 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
 public class ErpAppApplicationFx extends Application {
 	
 	private ConfigurableApplicationContext applicationContext;
-	
-//	public static void main(String[] args) {
-//		launch(args);		
-//	}
-	
+
 	@Override
 	public void init() {
 		this.applicationContext = new SpringApplicationBuilder(ErpAppApplication.class).run();
@@ -26,8 +23,15 @@ public class ErpAppApplicationFx extends Application {
 	public void start(Stage stage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(ErpAppApplication.class.getResource("/com/consafe/erpApp/gui/MainView.fxml"));
 		loader.setControllerFactory(applicationContext::getBean);
-		Scene scene = new Scene(loader.load());
+		
+		ScrollPane scrollPane = loader.load();
+		
+		scrollPane.setFitToHeight(true);
+		scrollPane.setFitToWidth(true);
+		
+		Scene scene = new Scene(scrollPane);
 		stage.setScene(scene);
+		stage.setTitle("ERP Consafe");
 		stage.show();
 	}
 	
