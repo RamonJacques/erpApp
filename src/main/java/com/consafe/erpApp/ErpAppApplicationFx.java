@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 public class ErpAppApplicationFx extends Application {
 	
 	private ConfigurableApplicationContext applicationContext;
+	
+	private static Scene mainScene;
 
 	@Override
 	public void init() {
@@ -29,8 +31,8 @@ public class ErpAppApplicationFx extends Application {
 		scrollPane.setFitToHeight(true);
 		scrollPane.setFitToWidth(true);
 		
-		Scene scene = new Scene(scrollPane);
-		stage.setScene(scene);
+		mainScene = new Scene(scrollPane);
+		stage.setScene(mainScene);
 		stage.setTitle("ERP Consafe");
 		stage.show();
 	}
@@ -39,5 +41,9 @@ public class ErpAppApplicationFx extends Application {
 	public void stop() {
 		applicationContext.close();
 		Platform.exit();
+	}
+	
+	public static Scene getMainScene() {
+		return mainScene;
 	}
 }

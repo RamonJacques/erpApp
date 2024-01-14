@@ -16,7 +16,7 @@
             <Insets left="10.0" top="10.0" />
          </padding>
       </Label>
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Java application using:&#10;Spring Boot&#10;JPA&#10;JavaFX&#10;MySQL&#10;&#10;Designed by: Ramon Ribeiro Jacques">
+      <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="565.0" text="Java application using:&#10;Spring Boot&#10;JPA&#10;JavaFX&#10;MySQL&#10;&#10;Designed by: Ramon Ribeiro Jacques&#10;Started date: 14/01/2024">
          <padding>
             <Insets left="10.0" />
          </padding>
