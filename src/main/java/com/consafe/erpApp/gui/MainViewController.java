@@ -30,7 +30,7 @@ public class MainViewController implements Initializable {
 
 	@FXML
 	public void onMenuItemAddressAction() {
-		System.out.println("Address");
+		loadView("/com/consafe/erpApp/gui/AddressList.fxml");
 	}
 
 	@FXML
