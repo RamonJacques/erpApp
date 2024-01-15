@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.consafe.erpApp.gui.AddressListController">
    <children>
       <Label text="Endereço">
          <font>
@@ -22,21 +21,21 @@
       </Label>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-          <Button mnemonicParsing="false" text="Novo" />
+          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" text="Novo" />
             <Button mnemonicParsing="false" text="Button" />
             <Button mnemonicParsing="false" text="Button" />
         </items>
       </ToolBar>
-      <TableView prefHeight="421.0" prefWidth="686.0">
+      <TableView fx:id="tableViewAddress" prefHeight="421.0" prefWidth="686.0">
         <columns>
-          <TableColumn prefWidth="41.60003662109375" text="Id" />
-          <TableColumn prefWidth="201.59997177124023" text="Rua" />
-            <TableColumn minWidth="0.0" prefWidth="44.00001525878906" text="Núm." />
-            <TableColumn prefWidth="89.60003662109375" text="Bairro" />
-            <TableColumn prefWidth="52.0" text="Compl." />
-            <TableColumn prefWidth="99.99993896484375" text="Cidade" />
-            <TableColumn prefWidth="65.60003662109375" text="Estado" />
-            <TableColumn prefWidth="92.00006103515625" text="Cep" />
+          <TableColumn fx:id="tableColumnId" prefWidth="41.60003662109375" text="Id" />
+          <TableColumn fx:id="tableColumnStreet" prefWidth="201.59997177124023" text="Rua" />
+            <TableColumn fx:id="tableColumnNumber" minWidth="0.0" prefWidth="44.00001525878906" text="Núm." />
+            <TableColumn fx:id="tableColumnNeighborhood" prefWidth="89.60003662109375" text="Bairro" />
+            <TableColumn fx:id="tableColumnComplement" prefWidth="52.0" text="Compl." />
+            <TableColumn fx:id="tableColumnCity" prefWidth="99.99993896484375" text="Cidade" />
+            <TableColumn fx:id="tableColumnState" prefWidth="65.60003662109375" text="Estado" />
+            <TableColumn fx:id="tableColumnCep" prefWidth="92.00006103515625" text="Cep" />
         </columns>
       </TableView>
    </children>
